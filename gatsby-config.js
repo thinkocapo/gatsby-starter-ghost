@@ -49,7 +49,8 @@ if (
  */
 module.exports = {
     siteMetadata: {
-        siteUrl: process.env.SITEURL || config.siteUrl,
+        // siteUrl: process.env.SITEURL || config.siteUrl,
+        siteUrl: "coruscating-otter-1c1142"
     },
     trailingSlash: 'always',
     plugins: [
