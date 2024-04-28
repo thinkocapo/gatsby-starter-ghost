@@ -20,12 +20,20 @@ import "../../styles/app.css";
  */
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node;
-    const twitterUrl = site.twitter
-        ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
-        : null;
-    const facebookUrl = site.facebook
-        ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
-        : null;
+    /*
+    'Twitter' field in Ghost Admin should get re-purposed as LinkedIn. Get a linkedin.svg
+    */
+    // const twitterUrl = site.twitter
+    //     ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
+    //     : null;
+    // const facebookUrl = site.facebook
+    //     ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
+    //     : null;
+    /* TODO
+    'Facebook' field in Ghost Admin is used for writing instagram Url
+    Can't add a 'Instagram' field so re-purpose the Facebook <a> and <img>
+    const instagramUrl = facebookUrl...
+    */
 
     return <>
         <Helmet>
@@ -48,7 +56,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                     <div className="container">
                         <div className="site-mast">
                             <div className="site-mast-left">
-                                <Link to="/">
+                                {/* <Link to="/">
                                     {site.logo ? (
                                         <img
                                             className="site-logo"
@@ -56,12 +64,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             alt={site.title}
                                         />
                                     ) : (
-                                        <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={site.title} />
+                                        <a>HOME</a>
+                                        // <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt={site.title} />
                                     )}
-                                </Link>
+                                </Link> */}
                             </div>
                             <div className="site-mast-right">
-                                {site.twitter && (
+                                {/* {site.twitter && (
                                     <a
                                         href={twitterUrl}
                                         className="site-nav-item"
@@ -74,22 +83,23 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             alt="Twitter"
                                         />
                                     </a>
-                                )}
+                                )} */}
                                 {site.facebook && (
                                     <a
-                                        href={facebookUrl}
+                                        // href={facebookUrl}
+                                        href={"https://www.instagram.com/thinkocapo/"}
                                         className="site-nav-item"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         <img
                                             className="site-nav-icon"
-                                            src="/images/icons/facebook.svg"
-                                            alt="Facebook"
+                                            src="/images/icons/instagram.svg"
+                                            alt="Instagram"
                                         />
                                     </a>
                                 )}
-                                <a
+                                {/* <a
                                     className="site-nav-item"
                                     href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
                                     target="_blank"
@@ -100,7 +110,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         src="/images/icons/rss.svg"
                                         alt="RSS Feed"
                                     />
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                         {isHome ? (
@@ -122,12 +132,13 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 />
                             </div>
                             <div className="site-nav-right">
-                                <Link
+                                {/* TODO could put the Instagram icon down in here site-nav-right */}
+                                {/* <Link
                                     className="site-nav-button"
                                     to="/about"
                                 >
                                     About
-                                </Link>
+                                </Link> */}
                             </div>
                         </nav>
                     </div>
