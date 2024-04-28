@@ -1,11 +1,11 @@
 {
   "development": {
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0"
+    "apiUrl": "https://willcap.ghost.io",
+    "contentApiKey": "63740ded1e7283f48877f4d6ef"
   },
   "production": {
-    "apiUrl": "https://gatsby.ghost.io",
-    "contentApiKey": "9cc5c67c358edfdd81455149d0",
+    "apiUrl": "https://willcap.ghost.io",
+    "contentApiKey": "63740ded1e7283f48877f4d6ef",
     "siteUrl": "https://coruscating-otter-1c1142.netlify.app"
   }
 }
