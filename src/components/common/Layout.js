@@ -173,7 +173,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                         />
                                     </a>
                                 )}
-                                {site.facebook && (
+                                {/* {site.facebook && (
                                     <a
                                         // href={facebookUrl}
                                         href={"https://www.instagram.com/thinkocapo/"}
@@ -187,7 +187,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             alt="Instagram"
                                         />
                                     </a>
-                                )}
+                                )} */}
                                 {/* Added my own LinkedIn. Original site-mast-right only had 2 icons */}
                                 {site.facebook && (
                                     <a
