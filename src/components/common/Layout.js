@@ -21,19 +21,18 @@ import "../../styles/app.css";
 const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
     const site = data.allGhostSettings.edges[0].node;
     /*
-    'Twitter' field in Ghost Admin should get re-purposed as LinkedIn. Get a linkedin.svg
+    TODO
+    'LinkedIn' field can pull from GhostAdmin.site.SomeOtherProperty or be hard-coded with right link
+    'Github' field can pull from GhostAdmin.site.SomeOtherProperty or be hard-coded with right link
+    could come from env variable.
     */
+
     // const twitterUrl = site.twitter
     //     ? `https://twitter.com/${site.twitter.replace(/^@/, ``)}`
     //     : null;
     // const facebookUrl = site.facebook
     //     ? `https://www.facebook.com/${site.facebook.replace(/^\//, ``)}`
     //     : null;
-    /* TODO
-    'Facebook' field in Ghost Admin is used for writing instagram Url
-    Can't add a 'Instagram' field so re-purpose the Facebook <a> and <img>
-    const instagramUrl = facebookUrl...
-    */
 
     return <>
         <Helmet>
@@ -70,20 +69,23 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </Link> */}
                             </div>
                             <div className="site-mast-right">
-                                {/* {site.twitter && (
+                                {/* Re-Purposed for Github */}
+                                {site.twitter && (
                                     <a
-                                        href={twitterUrl}
+                                        // href={twitterUrl}
+                                        href={"https://github.com/thinkocapo"}
                                         className="site-nav-item"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
                                         <img
                                             className="site-nav-icon"
-                                            src="/images/icons/twitter.svg"
+                                            src="/images/icons/github-142-svgrepo-com.svg"
                                             alt="Twitter"
                                         />
                                     </a>
-                                )} */}
+                                )}
+                                {/* Re-Purposed for Instagram */}
                                 {site.facebook && (
                                     <a
                                         // href={facebookUrl}
@@ -94,7 +96,23 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                     >
                                         <img
                                             className="site-nav-icon"
-                                            src="/images/icons/instagram.svg"
+                                            src="/images/icons/instagram-svgrepo-com.svg"
+                                            alt="Instagram"
+                                        />
+                                    </a>
+                                )}
+                                {/* Added my own LinkedIn. Original site-mast-right only had 2 icons */}
+                                {site.facebook && (
+                                    <a
+                                        // href={facebookUrl}
+                                        href={"https://www.linkedin.com/in/williamcapozzoli/"}
+                                        className="site-nav-item"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            className="site-nav-icon"
+                                            src="/images/icons/linkedin-svgrepo-com.svg"
                                             alt="Instagram"
                                         />
                                     </a>
