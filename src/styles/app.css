@@ -665,7 +665,8 @@ h6 {
     padding-top: 20px;
     padding-bottom: 20px;
     color: #fff;
-    background: var(--color-base);
+    background: linear-gradient(45deg, #3e5fbc 0%, #284187);
+    /* background: var(--color-base); */
     background-position: center;
     background-size: cover;
 }
@@ -816,6 +817,7 @@ h6 {
     height: 200px;
     background: var(--color-secondary) no-repeat center center;
     background-size: cover;
+    border-radius: 0.4rem;
 }
 
 .post-card-footer {
