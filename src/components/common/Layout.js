@@ -69,8 +69,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 </Link> */}
                             </div>
                             <div className="site-mast-right">
+                                {/* DISPLAYS AT TOP OF NAVBAR */}
                                 {/* Re-Purposed for Github */}
-                                {site.twitter && (
+                                {/* {site.twitter && (
                                     <a
                                         // href={twitterUrl}
                                         href={"https://github.com/thinkocapo"}
@@ -84,9 +85,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             alt="Twitter"
                                         />
                                     </a>
-                                )}
+                                )} */}
                                 {/* Re-Purposed for Instagram */}
-                                {site.facebook && (
+                                {/* {site.facebook && (
                                     <a
                                         // href={facebookUrl}
                                         href={"https://www.instagram.com/thinkocapo/"}
@@ -100,9 +101,9 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             alt="Instagram"
                                         />
                                     </a>
-                                )}
+                                )} */}
                                 {/* Added my own LinkedIn. Original site-mast-right only had 2 icons */}
-                                {site.facebook && (
+                                {/* {site.facebook && (
                                     <a
                                         // href={facebookUrl}
                                         href={"https://www.linkedin.com/in/williamcapozzoli/"}
@@ -116,7 +117,7 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                             alt="Instagram"
                                         />
                                     </a>
-                                )}
+                                )} */}
                                 {/* <a
                                     className="site-nav-item"
                                     href={`https://feedly.com/i/subscription/feed/${config.siteUrl}/rss/`}
@@ -150,13 +151,59 @@ const DefaultLayout = ({ data, children, bodyClass, isHome }) => {
                                 />
                             </div>
                             <div className="site-nav-right">
-                                {/* TODO could put the Instagram icon down in here site-nav-right */}
+                                {/* DISPLAYS AT BOTTOM OF NAVBAR */}
                                 {/* <Link
                                     className="site-nav-button"
                                     to="/about"
                                 >
                                     About
                                 </Link> */}
+                                {site.twitter && (
+                                    <a
+                                        // href={twitterUrl}
+                                        href={"https://github.com/thinkocapo"}
+                                        className="site-nav-item"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            className="site-nav-icon"
+                                            src="/images/icons/github-142-svgrepo-com.svg"
+                                            alt="Twitter"
+                                        />
+                                    </a>
+                                )}
+                                {site.facebook && (
+                                    <a
+                                        // href={facebookUrl}
+                                        href={"https://www.instagram.com/thinkocapo/"}
+                                        className="site-nav-item"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            className="site-nav-icon"
+                                            src="/images/icons/instagram-svgrepo-com.svg"
+                                            alt="Instagram"
+                                        />
+                                    </a>
+                                )}
+                                {/* Added my own LinkedIn. Original site-mast-right only had 2 icons */}
+                                {site.facebook && (
+                                    <a
+                                        // href={facebookUrl}
+                                        href={"https://www.linkedin.com/in/williamcapozzoli/"}
+                                        className="site-nav-item"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            className="site-nav-icon"
+                                            src="/images/icons/linkedin-svgrepo-com.svg"
+                                            alt="Instagram"
+                                        />
+                                    </a>
+                                )}
                             </div>
                         </nav>
                     </div>
