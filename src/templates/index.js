@@ -5,6 +5,17 @@ import { graphql } from "gatsby";
 import { Layout, PostCard, Pagination } from "../components/common";
 import { MetaData } from "../components/common/meta";
 
+import * as Sentry from "@sentry/gatsby";
+
+Sentry.init({
+    dsn: "https://07ad5ecf6e3547f685117e58af5319cc@o88872.ingest.us.sentry.io/5570729",
+    // integrations: [Sentry.replayIntegration()],
+    integrations: [Sentry.browserTracingIntegration()],
+    tracesSampleRate: 1.0,
+    // replaysSessionSampleRate: 0.1,
+    // replaysOnErrorSampleRate: 1.0,
+});
+
 /**
  * Main index page (home page)
  *

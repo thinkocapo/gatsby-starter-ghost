@@ -74,6 +74,9 @@ module.exports = {
         },
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
+        {
+            resolve: "@sentry/gatsby",
+        },
         `gatsby-transformer-sharp`,
         {
             resolve: `gatsby-source-ghost`,
