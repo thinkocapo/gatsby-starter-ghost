@@ -677,8 +677,9 @@ h6 {
     color: #fff;
     /* opacity: 0.7; */
 
-    /* TRY for making bolder
-     font-weight: 500; */
+    /* CUSTOM */
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .site-nav-item:hover {
