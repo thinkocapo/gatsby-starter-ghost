@@ -713,7 +713,8 @@ h6 {
 .site-banner {
     max-width: 80%;
     margin: 0 auto;
-    padding: 10vw 0;
+    /* padding: 10vw 0; */
+    padding: 3vw 0;
     text-align: center;
 }
 
@@ -820,7 +821,9 @@ h6 {
     height: 200px;
     background: var(--color-secondary) no-repeat center center;
     background-size: cover;
-    border-radius: 0.4rem;
+
+    /* CUSTOM */
+    border-radius: 0.5rem;
 }
 
 .post-card-footer {
