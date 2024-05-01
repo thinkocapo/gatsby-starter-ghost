@@ -1188,3 +1188,12 @@ h6 {
   .kg-image {
     height: auto;
   }
+
+  /* CUSTOM for <table> <tr> in /whereiswill */
+  th {
+    text-align:left;
+  }
+  tr {
+    /* border-bottom: 1pt solid black; */
+    border-bottom: 0.5pt solid grey
+  }
