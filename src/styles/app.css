@@ -1014,11 +1014,18 @@ h6 {
 
     /* custom */
     color: #fff;
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .site-foot-nav a:hover {
     text-decoration: none;
     color: rgba(255,255,255,1);
+}
+
+.site-foot-nav-left {
+    font-size: 1.6rem;
+    font-weight: 500;
 }
 
 .site-foot-nav-right a {
